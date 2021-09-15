@@ -1,185 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <section id="main" class="main">
-    <div class="heading">
-      <div class="heading__tabs">
-        <div class="heading__tabs-item active">
-          <span>Каталог</span>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section id="main" class="main">
+      <div class="heading">
+        <div class="heading__tabs">
+          <div class="heading__tabs-item active">
+            <span>Каталог</span>
+          </div>
+          <div class="heading__tabs-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="18"
+              viewBox="0 0 19 18"
+              fill="none"
+            >
+              <path
+                d="M11.9482 5.71308L12.0656 5.97634L12.3523 6.00657L17.2145 6.51917C17.645 6.56456 17.8184 7.09841 17.4966 7.38803L13.8655 10.6568L13.651 10.8499L13.7109 11.1322L14.7254 15.9101C14.8153 16.3334 14.3616 16.6632 13.9867 16.4472L9.7496 14.0061L9.5 13.8623L9.2504 14.0061L5.01327 16.4472C4.63836 16.6632 4.1847 16.3334 4.27457 15.9101L5.2891 11.1322L5.34905 10.8499L5.13452 10.6568L1.50338 7.38803C1.18164 7.09841 1.35497 6.56456 1.78547 6.51917L6.64766 6.00657L6.93436 5.97634L7.05184 5.71308L9.0434 1.25016C9.21966 0.855168 9.78034 0.85517 9.9566 1.25016L11.9482 5.71308Z"
+                stroke="#1C1C1C"
+              />
+            </svg>
+            <span>Избранное</span>
+          </div>
         </div>
-        <div class="heading__tabs-item">
-          <span>Избранное</span>
+      </div>
+      <div class="content">
+        <div class="loader__wrapper">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="content__list">
+          <ul id="doctors__list"></ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content__list">
+          <ul>
+            <li class="content__list-item">
+              <div class="content__two-level">
+                <ul class="content__three-level show">
+                  <li> 
+                    <img src="./assets/img/Pic.jpg" alt="" title="${photo.title}">
+                    <div class="favorite__button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M8.0868 1.04641C8.43933 0.256421 9.56067 0.25642 9.9132 1.0464L11.9048 5.50932L16.767 6.02193C17.628 6.1127 17.9746 7.1804 17.3311 7.75964L13.7 11.0284L14.7145 15.8063C14.8943 16.6527 13.9869 17.3124 13.2371 16.8805L9 14.4393L4.76287 16.8805C4.01306 17.3124 3.10573 16.6527 3.28547 15.8063L4.3 11.0284L0.668853 7.75964C0.0253845 7.1804 0.372042 6.1127 1.23305 6.02193L6.09524 5.50932L8.0868 1.04641Z" fill="#D0D0D0"/>
+                      </svg>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet,</p>
+                  </li>
+                  <li> 
+                    <img src="./assets/img/Pic.jpg" alt="" title="${photo.title}">
+                    <div class="favorite__button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M8.0868 1.04641C8.43933 0.256421 9.56067 0.25642 9.9132 1.0464L11.9048 5.50932L16.767 6.02193C17.628 6.1127 17.9746 7.1804 17.3311 7.75964L13.7 11.0284L14.7145 15.8063C14.8943 16.6527 13.9869 17.3124 13.2371 16.8805L9 14.4393L4.76287 16.8805C4.01306 17.3124 3.10573 16.6527 3.28547 15.8063L4.3 11.0284L0.668853 7.75964C0.0253845 7.1804 0.372042 6.1127 1.23305 6.02193L6.09524 5.50932L8.0868 1.04641Z" fill="#D0D0D0"/>
+                      </svg>
+                    </div>
+                  </li>
+                  <li> 
+                    <img src="./assets/img/Pic.jpg" alt="" title="${photo.title}">
+                    <div class="favorite__button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M8.0868 1.04641C8.43933 0.256421 9.56067 0.25642 9.9132 1.0464L11.9048 5.50932L16.767 6.02193C17.628 6.1127 17.9746 7.1804 17.3311 7.75964L13.7 11.0284L14.7145 15.8063C14.8943 16.6527 13.9869 17.3124 13.2371 16.8805L9 14.4393L4.76287 16.8805C4.01306 17.3124 3.10573 16.6527 3.28547 15.8063L4.3 11.0284L0.668853 7.75964C0.0253845 7.1804 0.372042 6.1127 1.23305 6.02193L6.09524 5.50932L8.0868 1.04641Z" fill="#D0D0D0"/>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="favorites__wrapper">
+            <div class="favorites__image">
+              <img src="./assets/img/favoritedefault.png" alt="" />
+            </div>
+            <div class="favorites__title">
+              <h2>Список избранного пуст</h2>
+            </div>
+            <div class="favorites__desc">
+              <p>Добавляйте изображения, нажимая на звездочки</p>
+            </div>
+          </div>
+          <!--<ul>
+            <li class="content__list-item">
+              <h2>Leanne Garham</h2>
+              <ul>
+                <li>
+                  <p>Lorem ipsum dolor sit.</p>
+                  <ul>
+                    <li><img src="./assets/img/Star1.svg" alt="" /></li>
+                    <li><img src="./assets/img/Star1.svg" alt="" /></li>
+                    <li><img src="./assets/img/Star1.svg" alt="" /></li>
+                    <li><img src="./assets/img/Star1.svg" alt="" /></li>
+                  </ul>
+                </li>
+                <li><p>Lorem ipsum dolor sit.</p></li>
+                <li><p>Lorem ipsum dolor sit.</p></li>
+                <li><p>Lorem ipsum dolor sit.</p></li>
+              </ul>
+            </li>
+          </ul>-->
+        </div>
+      </div>
+    </section>
+    <button id="open-btn">
+      OPEN THE MODAL
+    </button>
+
+    <div id="modal-background">
+      <span id="close-btn">&times;</span>
+      <div id="modal">
+          <img src="./assets/img/Pic.jpg" alt="">
         </div>
       </div>
     </div>
-    <div class="content">
-      <div class="content__list">
-        <ul>
-          <li class="content__list-item">
-            <div class="dropdown__wrapper">
-              <div class="dropdown">
-                +
-              </div>
-              <h2>Leanne Garham</h2>
-            </div>
-            <ul class="content__hidden">
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="content__list-item">
-            <div class="dropdown__wrapper">
-              <div class="dropdown">
-                +
-              </div>
-              <h2>Leanne Garham</h2>
-            </div>
-            <ul class="content__hidden">
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-              <li class="content__two-level">
-                <div class="dropdown__wrapper">
-                  <div class="dropdown">
-                    +
-                  </div>
-                  <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <ul class="content__three-level">
-                  <li> <img src="./assets/img/Pic.jpg" alt=""> </li>
-                  <li> <img src="./assets/img/Pic2.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic3.jpg" alt="">  </li>
-                  <li> <img src="./assets/img/Pic.jpg" alt="">  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content">
-      <div class="content__list">
-        <ul>
-          <li class="content__list-item">
-            <h2>Leanne Garham</h2>
-            <ul>
-              <li><p>Lorem ipsum dolor sit.</p>
-                <ul>
-                  <li> <img src="./assets/img/Star1.svg" alt=""> </li>
-                  <li> <img src="./assets/img/Star1.svg" alt="">  </li>
-                  <li> <img src="./assets/img/Star1.svg" alt="">  </li>
-                  <li> <img src="./assets/img/Star1.svg" alt="">  </li>
-                </ul>
-              </li>
-              <li><p>Lorem ipsum dolor sit.</p></li>
-              <li><p>Lorem ipsum dolor sit.</p></li>
-              <li><p>Lorem ipsum dolor sit.</p></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <script src="./assets/js/index.js"></script>
-</body>
+    <script src="./assets/js/index.js"></script>
+  </body>
 </html>

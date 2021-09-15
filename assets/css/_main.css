@@ -12,6 +12,18 @@
     border-top-right-radius: 8px;
     background: rgba(140, 255, 255, 0.7);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading__tabs-item svg {
+    margin-right: 15px;
+}
+
+.heading__tabs-item:last-child.active svg {
+    fill: #117DC1;
+    ;
 }
 
 .heading__tabs-item.active {
@@ -21,7 +33,7 @@
 .content {
     position: absolute;
     transition: .5s;
-    height: 0;
+    height: 830px;
     overflow: hidden;
     opacity: 0;
     background: #fff;
@@ -30,9 +42,9 @@
 
 .content.show {
     position: unset;
-    height: max-content;
+    height: auto;
     overflow: unset;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .content ul {
@@ -47,6 +59,11 @@
 .content ul li.content__list-item {
     border-bottom: 1px solid #f5f5f5;
     padding: 24px 72px;
+    transition: .5s;
+}
+
+.content ul li.content__list-item:hover {
+    background: #EDF9FF;
 }
 
 .dropdown__wrapper {
@@ -75,6 +92,12 @@
     transition: .5s;
 }
 
+.content__hidden.show {
+    height: fit-content;
+    overflow: hidden;
+    transition: .5s;
+}
+
 .content__two-level {
     padding: 24px 64px;
 }
@@ -94,6 +117,7 @@ ul.content__three-level {
 .content__three-level.show {
     padding: 24px 128px;
     opacity: 1;
+    height: fit-content;
 }
 
 ul.content__three-level li {
@@ -101,4 +125,160 @@ ul.content__three-level li {
     width: 100%;
     padding: 0 15px;
     margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+ul.content__three-level li p {
+    margin-top: 12px;
+}
+
+.content__three-level li img {
+    border-radius: 4px;
+}
+
+.favorites__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 832px;
+}
+
+.favorites__image {
+    margin-bottom: 32px;
+}
+
+.favorites__title {
+    margin-bottom: 8px;
+}
+
+.favorite__button {
+    position: absolute;
+    top: 8px;
+    right: 23px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.loader__wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.loaded .lds-ring {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.loaded .loader__wrapper {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all .3s 1s ease-out;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #117DC1;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #117DC1 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#modal-background {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.47);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+}
+
+#modal img {
+    width: 100%;
+}
+
+#close-btn {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    font-size: 50px;
+    color: #fff;
+}
+
+#close-btn:hover {
+    cursor: pointer;
+    color: #117DC1;
+}
+
+@keyframes animatemodal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
 }
