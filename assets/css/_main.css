@@ -10,7 +10,7 @@
     padding: 16px 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    background: rgba(140, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -73,6 +73,7 @@
 }
 
 .dropdown {
+    position: relative;
     width: 32px;
     height: 32px;
     background-color: rgba(17, 125, 193, 1);
@@ -84,6 +85,23 @@
     font-size: 20px;
     color: #fff;
     transition: .5s;
+}
+
+.dropdown::before {
+    content: '\271A';
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+}
+
+.dropdown__wrapper.active .dropdown::before {
+    content: '\2014';
+}
+
+.dropdown__wrapper.active .dropdown {
+    background-color: rgba(255, 175, 55, 1);
 }
 
 .content__hidden {
@@ -137,7 +155,7 @@ ul.content__three-level li p {
     border-radius: 4px;
 }
 
-.favorites__wrapper {
+.favorites__wrapper, .server-error {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -146,11 +164,26 @@ ul.content__three-level li p {
     height: 832px;
 }
 
-.favorites__image {
+.server-error.hide {
+    display: none;
+}
+
+.server-error.d-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+}
+
+.favorites__wrapper.hide {
+    display: none;
+}
+
+.favorites__image, .server-error__image {
     margin-bottom: 32px;
 }
 
-.favorites__title {
+.favorites__title, .server-error__title {
     margin-bottom: 8px;
 }
 
@@ -186,6 +219,31 @@ ul.content__three-level li p {
     visibility: hidden;
     transform: translateY(-100%);
     transition: all .3s 1s ease-out;
+}
+
+.load-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+}
+
+.load-wrap.active {
+    height: 328px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-none {
+    display: none;
+}
+
+.favorite__button svg path.active {
+    fill: orange;
+}
+
+.load-wrap .lds-ring {
+    opacity: 1;
 }
 
 .lds-ring {
