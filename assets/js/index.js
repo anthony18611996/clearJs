@@ -298,6 +298,7 @@ window.addEventListener("load", function () {
         ".content__three-level.show.favorites"
       ),
       noFavoriteContainer = document.querySelector(".favorites__wrapper");
+      let hide = document.querySelector("#favorites");
     container.childNodes.forEach((item) => item.remove());
     if (getFavorites()) {
       getFavorites().forEach((photo) => {
@@ -327,6 +328,7 @@ window.addEventListener("load", function () {
           noFavoriteContainer.classList.remove("hide");
         } else {
           noFavoriteContainer.classList.add("hide");
+          hide.classList.remove("d-none");
         }
       });
     }
